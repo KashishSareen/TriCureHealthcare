@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TriCure Healthcare - More Care with Quality. Quality-driven pharmaceutical solutions from Bhayandar, Mumbai region."
+    />
+    <title>TriCure Healthcare | More Care with Quality</title>
+    </head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: "#0a2f45",
+              ocean: "#17608a",
+              leaf: "#1e7a45",
+              lime: "#7cc242",
+              mist: "#eef7f2",
+            },
+            fontFamily: {
+              sans: ["DM Sans", "sans-serif"],
+              display: ["Sora", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { color: #0a2f45; background: #fbfdfc; overflow-x: hidden; }
+      .display { font-family: "Sora", sans-serif; letter-spacing: -0.04em; }
+      .grad { background: linear-gradient(135deg, #17608a 0%, #1e7a45 60%, #7cc242 100%); }
+      .grad-text { background: linear-gradient(90deg, #17608a, #1e7a45 55%, #5fae30); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .grad-text-lt { background: linear-gradient(90deg, #8fd3f0, #7cc242); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .hero { background: radial-gradient(circle at 85% 10%, rgba(124,194,66,.35), transparent 30%), radial-gradient(circle at 10% 85%, rgba(23,96,138,.28), transparent 34%), linear-gradient(160deg, #f2faf6, #e4f1f5); }
+      .dots { background-image: radial-gradient(rgba(23,96,138,.16) 1.2px, transparent 1.2px); background-size: 24px 24px; }
+      .dark-sec { background: radial-gradient(circle at 15% 0%, rgba(23,96,138,.55), transparent 40%), radial-gradient(circle at 90% 100%, rgba(30,122,69,.5), transparent 40%), #0a2f45; }
+      .btn { background: linear-gradient(135deg, #17608a, #1e7a45); transition: .3s; box-shadow: 0 10px 25px -8px rgba(23,96,138,.55); }
+      .btn:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -8px rgba(30,122,69,.6); }
+      .gborder { background: linear-gradient(135deg, rgba(23,96,138,.35), rgba(124,194,66,.35)); transition: .4s; }
+      .pcard:hover .gborder { background: linear-gradient(135deg, #17608a, #7cc242); transform: translateY(-8px); box-shadow: 0 28px 50px -18px rgba(23,96,138,.45); }
+      .pimg { background: radial-gradient(circle at 50% 40%, #fff, #e6f3ee 70%); }
+      .pcard img { transition: transform .5s ease; }
+      .pcard:hover img { transform: scale(1.08) rotate(-1.5deg); }
+      .glass { background: linear-gradient(145deg, rgba(255,255,255,.1), rgba(255,255,255,.03)); border: 1px solid rgba(255,255,255,.14); backdrop-filter: blur(10px); transition: .35s; }
+      .glass:hover { transform: translateY(-6px); border-color: rgba(124,194,66,.6); background: linear-gradient(145deg, rgba(255,255,255,.16), rgba(124,194,66,.08)); }
+      .ico { background: linear-gradient(135deg, #17608a, #1e7a45); }
+      .nav-open { max-height: 600px !important; opacity: 1 !important; padding: 1.25rem !important; }
+      @media (min-width: 768px) { .nav-open { max-height: none !important; padding: 0 !important; } }
+      @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+      .hero-dark { background: radial-gradient(circle at 80% 20%, rgba(23,96,138,.7), transparent 45%), radial-gradient(circle at 10% 90%, rgba(30,122,69,.55), transparent 45%), linear-gradient(160deg, #061f30, #0a2f45 60%, #0d3d3a); }
+      .dots-lt { background-image: radial-gradient(rgba(255,255,255,.14) 1px, transparent 1px); background-size: 26px 26px; }
+      .blob { position: absolute; border-radius: 9999px; filter: blur(70px); pointer-events: none; }
+      .b1 { width: 340px; height: 340px; background: rgba(124,194,66,.28); top: -80px; left: -80px; animation: flt 9s ease-in-out infinite; }
+      .b2 { width: 400px; height: 400px; background: rgba(23,96,138,.45); right: -100px; bottom: -120px; animation: flt 11s ease-in-out infinite reverse; }
+      @keyframes flt { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-22px); } }
+      @keyframes orb { to { transform: rotate(360deg); } }
+      @keyframes marq { to { transform: translateX(-50%); } }
+      .fl { animation: flt 6s ease-in-out infinite; }
+      .orb-a { animation: orb 30s linear infinite; }
+      .orb-b { animation: orb 20s linear infinite reverse; }
+      .marq { display: flex; gap: 3rem; width: max-content; animation: marq 35s linear infinite; }
+      .core { background: linear-gradient(135deg, #17608a, #1e7a45 60%, #7cc242); box-shadow: 0 0 80px 10px rgba(124,194,66,.35), inset 0 0 30px rgba(255,255,255,.25); }
+      .ring-g { background: linear-gradient(135deg, #17608a, #7cc242); }
+      .why-card { background: linear-gradient(145deg, rgba(255,255,255,.1), rgba(255,255,255,.03)); border: 1px solid rgba(255,255,255,.14); transition: .35s; }
+      .why-card:hover { transform: translateY(-6px); border-color: rgba(124,194,66,.6); background: linear-gradient(145deg, rgba(255,255,255,.16), rgba(124,194,66,.08)); }
+      .mv-card { background: radial-gradient(circle at 15% 0%, rgba(23,96,138,.55), transparent 40%), radial-gradient(circle at 90% 100%, rgba(30,122,69,.5), transparent 40%), #0a2f45; }
+      .net-card { background: linear-gradient(150deg, #ffffff, #eaf5f0); transition: .3s; }
+      .net-card:hover { transform: translateY(-4px); box-shadow: 0 20px 35px -18px rgba(23,96,138,.35); }
+    </style>
+  
+  <body class="font-sans">
+    <header class="fixed top-0 z-50 w-full border-b border-white/60 bg-white/85 shadow-sm backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5 lg:px-8">
+       <a href="#home" aria-label="TriCure Healthcare home" class="inline-flex items-center rounded-2xl border-2 border-lime/60 bg-white px-3 py-1.5 shadow-sm">
+  <img src="images/tricure_healthcare_logo.jpg" alt="TriCure Healthcare" class="h-14 w-auto" />
+</a>
+        <button id="menu-toggle" class="rounded-full border border-navy/15 p-2.5 md:hidden" aria-label="Open navigation" aria-expanded="false">
+          <span class="block h-0.5 w-5 bg-navy"></span>
+          <span class="mt-1 block h-0.5 w-5 bg-navy"></span>
+          <span class="mt-1 block h-0.5 w-5 bg-navy"></span>
+        </button>
+        <nav id="main-nav" class="absolute left-0 top-full max-h-0 w-full overflow-hidden bg-white px-5 opacity-0 transition-all duration-300 md:static md:flex md:max-h-none md:w-auto md:items-center md:gap-6 md:bg-transparent md:px-0 md:opacity-100" aria-label="Primary">
+          <a class="nav-link block py-2 text-sm font-semibold text-navy/70 hover:text-leaf md:py-0" href="#home">Home</a>
+          <a class="nav-link block py-2 text-sm font-semibold text-navy/70 hover:text-leaf md:py-0" href="#about">About</a>
+          <a class="nav-link block py-2 text-sm font-semibold text-navy/70 hover:text-leaf md:py-0" href="#why-us">Our Expertise</a>
+          <a class="nav-link block py-2 text-sm font-semibold text-navy/70 hover:text-leaf md:py-0" href="#products">Products</a>
+          <a class="nav-link block py-2 text-sm font-semibold text-navy/70 hover:text-leaf md:py-0" href="#network">Network</a>
+          <a class="nav-link block py-2 text-sm font-semibold text-navy/70 hover:text-leaf md:py-0" href="#team">Team</a>
+          <a class="btn mt-2 inline-flex rounded-full px-6 py-3 text-sm font-bold text-white md:mt-0" href="tel:+918652750036">Contact us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero-dark relative overflow-hidden pt-32 text-white lg:pt-40">
+        <div class="dots-lt absolute inset-0 opacity-50"></div>
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="relative mx-auto grid max-w-7xl items-center gap-14 px-5 pb-24 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:pb-32">
+          <div data-aos="fade-up">
+            <div class="glass mb-7 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-white/90">
+              <span class="h-2 w-2 animate-pulse rounded-full bg-lime"></span>Pharmaceutical company &middot; Bhayandar, Mumbai region
+            </div>
+            <h1 class="display text-5xl font-extrabold leading-[1.02] sm:text-6xl lg:text-7xl">
+              More care with <span class="grad-text-lt">quality.</span>
+            </h1>
+            <p class="mt-7 max-w-xl text-lg leading-8 text-white/70">
+              Quality-driven, reliable and patient-focused pharmaceutical solutions, trusted by doctors, pharmacists, hospitals and healthcare professionals.
+            </p>
+            <div class="mt-9 flex flex-wrap gap-3">
+              <a href="#products" class="rounded-full bg-white px-7 py-4 text-sm font-bold text-navy shadow-xl shadow-black/20 transition hover:-translate-y-0.5 hover:bg-lime">View our products</a>
+              <a href="tel:+918652750036" class="glass rounded-full px-7 py-4 text-sm font-bold text-white">Partner with us</a>
+            </div>
+            <div class="glass mt-12 grid max-w-lg grid-cols-3 divide-x divide-white/15 rounded-3xl py-5 text-center">
+              <div><strong class="display grad-text-lt text-3xl">2024</strong><p class="mt-1 text-xs text-white/60">Founded</p></div>
+              <div><strong class="display grad-text-lt text-3xl">17</strong><p class="mt-1 text-xs text-white/60">Products</p></div>
+              <div><strong class="display grad-text-lt text-3xl">7</strong><p class="mt-1 text-xs text-white/60">Distributors</p></div>
+            </div>
+          </div>
+          <div class="relative mx-auto aspect-square w-full max-w-[480px]" data-aos="zoom-in" data-aos-delay="150">
+            <div class="absolute inset-0 rounded-full border border-white/15"></div>
+            <div class="orb-a absolute inset-7 rounded-full border border-dashed border-white/25">
+              <span class="absolute -top-1.5 left-1/2 h-3 w-3 rounded-full bg-lime shadow-[0_0_20px_#7cc242]"></span>
+            </div>
+            <div class="orb-b absolute inset-20 rounded-full border border-white/20">
+              <span class="absolute -bottom-1.5 left-1/2 h-3 w-3 rounded-full bg-sky-300 shadow-[0_0_20px_#7dd3fc]"></span>
+            </div>
+            <div class="core absolute left-1/2 top-1/2 flex h-40 w-40 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full ring-8 ring-white/10">
+              <svg viewBox="0 0 64 64" class="h-20 w-20 drop-shadow-lg"><path d="M26 6h12v20h20v12H38v20H26V38H6V26h20z" fill="#fff" /></svg>
+            </div>
+            <div class="glass fl absolute left-0 top-8 flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-bold">
+              <span class="ico flex h-8 w-8 items-center justify-center rounded-lg">&#10003;</span>Quality first
+            </div>
+            <div class="glass fl absolute -right-1 top-1/3 flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-bold" style="animation-delay:-2s">
+              <span class="ico flex h-8 w-8 items-center justify-center rounded-lg">&#9825;</span>Patient safety
+            </div>
+            <div class="glass fl absolute bottom-16 left-2 flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-bold" style="animation-delay:-4s">
+              <span class="ico flex h-8 w-8 items-center justify-center rounded-lg">&#9901;</span>Trusted by doctors
+            </div>
+            <div class="fl absolute bottom-2 right-8 rounded-2xl bg-white px-5 py-3 text-navy shadow-2xl" style="animation-delay:-1s">
+              <p class="text-xs font-semibold text-navy/50">Since</p>
+              <p class="display grad-text text-2xl font-extrabold">2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative overflow-hidden border-t border-white/10 bg-white/5 py-4 backdrop-blur">
+          <div class="marq text-sm font-semibold text-white/60">
+            <span class="flex items-center gap-12">AMINUE<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">MIG Q10<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">SHITACAL D3<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">TRICITI 500<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">BESIVEL MD<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">BESIVEL M<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">MIGRONAP D<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">COXIKIT 90<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">PACVEL MR<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">PMT 40<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">PANSIA DSR<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">TRICOBA PFS<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">BRAINTAM<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">TRICETAM<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">T-SETRON<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <!-- repeated for seamless marquee -->
+            <span class="flex items-center gap-12">AMINUE<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">MIG Q10<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">SHITACAL D3<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">TRICITI 500<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">BESIVEL MD<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">BESIVEL M<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">MIGRONAP D<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">COXIKIT 90<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">PACVEL MR<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">PMT 40<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">PANSIA DSR<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">TRICOBA PFS<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">BRAINTAM<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">TRICETAM<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+            <span class="flex items-center gap-12">T-SETRON<i class="h-1.5 w-1.5 rounded-full bg-lime"></i></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT  -->
+      <section id="about" class="bg-white py-24 lg:py-32">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center" data-aos="fade-up">
+            <p class="text-sm font-bold text-leaf">About TriCure Healthcare</p>
+            <h2 class="display mt-4 text-4xl font-extrabold leading-tight sm:text-5xl">
+              Healthcare is <span class="grad-text">human first.</span>
+            </h2>
+            <div class="mt-6 flex flex-wrap justify-center gap-2">
+              <span class="rounded-full bg-mist px-4 py-2 text-sm font-semibold text-leaf ring-1 ring-leaf/15">Doctors</span>
+              <span class="rounded-full bg-mist px-4 py-2 text-sm font-semibold text-leaf ring-1 ring-leaf/15">Pharmacists</span>
+              <span class="rounded-full bg-mist px-4 py-2 text-sm font-semibold text-leaf ring-1 ring-leaf/15">Hospitals</span>
+              <span class="rounded-full bg-mist px-4 py-2 text-sm font-semibold text-leaf ring-1 ring-leaf/15">Healthcare professionals</span>
+              <span class="rounded-full bg-mist px-4 py-2 text-sm font-semibold text-leaf ring-1 ring-leaf/15">Patients</span>
+            </div>
+          </div>
+
+          <div class="mt-16 grid gap-10 lg:grid-cols-2 lg:gap-14">
+            <div class="space-y-6 text-lg leading-8 text-navy/70" data-aos="fade-up">
+              <p>
+                <strong class="text-navy">TriCure Healthcare Pvt. Ltd.</strong> is a Mumbai-region pharmaceutical company founded in
+                <strong class="text-navy">2024</strong> with a clear purpose: to contribute to better healthcare through
+                <strong class="text-navy">quality-driven, reliable and patient-focused pharmaceutical solutions</strong>.
+              </p>
+              <p>
+                Built on the philosophy of <strong class="text-navy">&ldquo;More Care with Quality&rdquo;</strong>, we develop and promote products that address meaningful healthcare needs, with a strong commitment to quality, safety and ethical practices.
+              </p>
+            </div>
+            <div class="space-y-6 text-lg leading-8 text-navy/70" data-aos="fade-up" data-aos-delay="100">
+              <p>
+                Our approach is centred on understanding the needs of healthcare professionals and patients, and building a portfolio that combines <strong class="text-navy">quality, consistency and accessibility</strong>.
+              </p>
+              <p>
+                We believe healthcare is not only about medicines. It is about <strong class="text-navy">care, trust, responsibility and the people whose lives depend on them.</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-16 grid gap-5 sm:grid-cols-3">
+            <div class="rounded-3xl bg-mist p-7 ring-1 ring-leaf/15" data-aos="fade-up">
+              <div class="ico flex h-11 w-11 items-center justify-center rounded-2xl text-lg text-white">&#10003;</div>
+              <h3 class="display mt-5 text-lg font-bold">Quality first</h3>
+              <p class="mt-2 text-sm leading-6 text-navy/60">Reliable, consistent standards behind every product we make.</p>
+            </div>
+            <div class="rounded-3xl bg-mist p-7 ring-1 ring-leaf/15" data-aos="fade-up" data-aos-delay="80">
+              <div class="ico flex h-11 w-11 items-center justify-center rounded-2xl text-lg text-white">&#9825;</div>
+              <h3 class="display mt-5 text-lg font-bold">Patient-centric</h3>
+              <p class="mt-2 text-sm leading-6 text-navy/60">Every decision is guided by better healthcare outcomes for patients.</p>
+            </div>
+            <div class="rounded-3xl bg-mist p-7 ring-1 ring-leaf/15" data-aos="fade-up" data-aos-delay="160">
+              <div class="ico flex h-11 w-11 items-center justify-center rounded-2xl text-lg text-white">&#9901;</div>
+              <h3 class="display mt-5 text-lg font-bold">Trusted partnerships</h3>
+              <p class="mt-2 text-sm leading-6 text-navy/60">Long-term relationships with doctors, pharmacists and hospitals.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MISSION & VISION  -->
+      <section id="mission-vision" class="bg-mist py-24 lg:py-32">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mx-auto mb-14 max-w-2xl text-center" data-aos="fade-up">
+            <p class="text-sm font-bold text-leaf">What drives us</p>
+            <h2 class="display mt-4 text-4xl font-extrabold leading-tight sm:text-5xl">
+              Our <span class="grad-text">mission &amp; vision.</span>
+            </h2>
+          </div>
+          <div class="grid gap-6 lg:grid-cols-2">
+            <div class="mv-card flex flex-col rounded-[2rem] p-8 text-white shadow-2xl shadow-navy/25 sm:p-10" data-aos="fade-up">
+              <div class="ico mb-6 flex h-12 w-12 items-center justify-center rounded-2xl text-xl">&#10022;</div>
+              <h3 class="display text-2xl font-bold">Our mission</h3>
+              <p class="mt-4 leading-7 text-white/80">
+                To provide quality-driven pharmaceutical solutions that support better healthcare outcomes and earn the lasting trust of the medical community.
+              </p>
+              <ul class="mt-6 space-y-3 text-sm leading-6 text-white/70">
+                <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-lime/20 text-xs text-lime">&#10003;</span><span>Strong focus on <b class="text-white">quality and patient safety</b></span></li>
+                <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-lime/20 text-xs text-lime">&#10003;</span><span>Building a responsible and relevant <b class="text-white">product portfolio</b></span></li>
+                <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-lime/20 text-xs text-lime">&#10003;</span><span>Working closely with <b class="text-white">doctors, pharmacists and hospitals</b></span></li>
+                <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-lime/20 text-xs text-lime">&#10003;</span><span>Following <b class="text-white">ethical and responsible business practices</b></span></li>
+              </ul>
+            </div>
+            <div class="mv-card flex flex-col rounded-[2rem] p-8 text-white shadow-2xl shadow-navy/25 sm:p-10" data-aos="fade-up" data-aos-delay="100">
+              <div class="ico mb-6 flex h-12 w-12 items-center justify-center rounded-2xl text-xl">&#9678;</div>
+              <h3 class="display text-2xl font-bold">Our vision</h3>
+              <p class="mt-4 leading-7 text-white/80">
+                To become a trusted and respected pharmaceutical healthcare company, recognised for quality, integrity, innovation and meaningful contribution to better patient care.
+              </p>
+              <ul class="mt-6 space-y-3 text-sm leading-6 text-white/70">
+                <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-lime/20 text-xs text-lime">&#10003;</span><span>Becoming a <b class="text-white">trusted and respected</b> healthcare company</span></li>
+                <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-lime/20 text-xs text-lime">&#10003;</span><span>Recognised for <b class="text-white">quality, integrity and innovation</b></span></li>
+                <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-lime/20 text-xs text-lime">&#10003;</span><span>Evolving continuously with <b class="text-white">changing medical needs</b></span></li>
+                <li class="flex gap-3"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-lime/20 text-xs text-lime">&#10003;</span><span>Creating <b class="text-white">long-term value</b> for patients, partners and society</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY US  -->
+      <section id="why-us" class="dark-sec py-24 text-white lg:py-32">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div data-aos="fade-up">
+              <p class="text-sm font-bold text-lime">The TriCure difference</p>
+              <h2 class="display mt-4 max-w-2xl text-4xl font-extrabold leading-tight sm:text-5xl">
+                Why choose <span class="grad-text-lt">TriCure Healthcare?</span>
+              </h2>
+            </div>
+            <p class="max-w-sm text-sm leading-7 text-white/60" data-aos="fade-up">
+              Every product carries a responsibility, and every patient deserves our best.
+            </p>
+          </div>
+          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="why-card relative overflow-hidden rounded-3xl p-7" data-aos="fade-up">
+              <span class="display absolute right-5 top-4 text-4xl font-extrabold text-white/10">01</span>
+              <div class="ico flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold shadow-lg shadow-black/20">&#10010;</div>
+              <h3 class="mt-8 font-display text-lg font-bold">Quality first</h3>
+              <p class="mt-3 text-sm leading-6 text-white/65">Quality is at the heart of everything we do. We focus on reliable pharmaceutical solutions and consistent standards.</p>
+            </div>
+            <div class="why-card relative overflow-hidden rounded-3xl p-7" data-aos="fade-up" data-aos-delay="60">
+              <span class="display absolute right-5 top-4 text-4xl font-extrabold text-white/10">02</span>
+              <div class="ico flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold shadow-lg shadow-black/20">&#9825;</div>
+              <h3 class="mt-8 font-display text-lg font-bold">Patient-centric approach</h3>
+              <p class="mt-3 text-sm leading-6 text-white/65">Our efforts are directed towards supporting better patient care and meaningful healthcare outcomes.</p>
+            </div>
+            <div class="why-card relative overflow-hidden rounded-3xl p-7" data-aos="fade-up" data-aos-delay="120">
+              <span class="display absolute right-5 top-4 text-4xl font-extrabold text-white/10">03</span>
+              <div class="ico flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold shadow-lg shadow-black/20">&#9901;</div>
+              <h3 class="mt-8 font-display text-lg font-bold">Trusted medical partnerships</h3>
+              <p class="mt-3 text-sm leading-6 text-white/65">We value long-term relationships with doctors, pharmacists, hospitals and healthcare professionals.</p>
+            </div>
+            <div class="why-card relative overflow-hidden rounded-3xl p-7" data-aos="fade-up" data-aos-delay="180">
+              <span class="display absolute right-5 top-4 text-4xl font-extrabold text-white/10">04</span>
+              <div class="ico flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold shadow-lg shadow-black/20">&#9776;</div>
+              <h3 class="mt-8 font-display text-lg font-bold">Relevant product portfolio</h3>
+              <p class="mt-3 text-sm leading-6 text-white/65">We develop a portfolio that addresses genuine therapeutic and healthcare requirements.</p>
+            </div>
+            <div class="why-card relative overflow-hidden rounded-3xl p-7" data-aos="fade-up">
+              <span class="display absolute right-5 top-4 text-4xl font-extrabold text-white/10">05</span>
+              <div class="ico flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold shadow-lg shadow-black/20">&#9878;</div>
+              <h3 class="mt-8 font-display text-lg font-bold">Ethical and responsible</h3>
+              <p class="mt-3 text-sm leading-6 text-white/65">Sustainable growth comes from ethical practices, transparency and accountability.</p>
+            </div>
+            <div class="why-card relative overflow-hidden rounded-3xl p-7" data-aos="fade-up" data-aos-delay="60">
+              <span class="display absolute right-5 top-4 text-4xl font-extrabold text-white/10">06</span>
+              <div class="ico flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold shadow-lg shadow-black/20">&#8635;</div>
+              <h3 class="mt-8 font-display text-lg font-bold">Continuous improvement</h3>
+              <p class="mt-3 text-sm leading-6 text-white/65">We keep learning and improving our products, processes and approach as healthcare needs evolve.</p>
+            </div>
+            <div class="why-card relative overflow-hidden rounded-3xl p-7" data-aos="fade-up" data-aos-delay="120">
+              <span class="display absolute right-5 top-4 text-4xl font-extrabold text-white/10">07</span>
+              <div class="ico flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold shadow-lg shadow-black/20">&#8734;</div>
+              <h3 class="mt-8 font-display text-lg font-bold">Commitment beyond products</h3>
+              <p class="mt-3 text-sm leading-6 text-white/65">Healthcare is not simply about delivering medicines. It is about trust, responsibility and care at every step.</p>
+            </div>
+            <div class="why-card relative overflow-hidden rounded-3xl p-7" data-aos="fade-up" data-aos-delay="180">
+              <span class="display absolute right-5 top-4 text-4xl font-extrabold text-white/10">&#9733;</span>
+              <div class="ico flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold shadow-lg shadow-black/20">&#9733;</div>
+              <h3 class="mt-8 font-display text-lg font-bold">More care with quality</h3>
+              <p class="mt-3 text-sm leading-6 text-white/65">Because every product carries a responsibility, and every patient deserves our best.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section id="products" class="bg-mist py-24 lg:py-32">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+            <div data-aos="fade-up">
+              <p class="text-sm font-bold text-leaf">Product portfolio</p>
+              <h2 class="display mt-4 text-4xl font-extrabold sm:text-5xl">Solutions with <span class="grad-text">purpose.</span></h2>
+            </div>
+            <p class="max-w-md text-sm leading-7 text-navy/60" data-aos="fade-up">
+              Developed with care across neurological, pain, gastrointestinal and nutritional needs.
+            </p>
+          </div>
+
+          <div class="mt-10 flex flex-wrap gap-2" data-aos="fade-up">
+            <button class="filter-btn grad rounded-full px-5 py-2.5 text-sm font-bold text-white" data-filter="all">All products</button>
+            <button class="filter-btn rounded-full bg-white px-5 py-2.5 text-sm font-bold text-navy/65 ring-1 ring-navy/10 hover:ring-leaf" data-filter="tablet">Tablets</button>
+            <button class="filter-btn rounded-full bg-white px-5 py-2.5 text-sm font-bold text-navy/65 ring-1 ring-navy/10 hover:ring-leaf" data-filter="injection">Injections</button>
+          </div>
+
+          <div id="product-grid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+            <!-- Tablets -->
+            <article class="pcard" data-cat="tablet" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/aminue_10.jpeg" alt="AMINUE 5/10 mg" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Tablet</span>
+                    <h3 class="font-display text-lg font-bold">AMINUE 5 &amp; 10 mg</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Amitriptyline + Mecobalamin combination for the management of neuropathic pain and associated nerve symptoms.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20AMINUE%205%20%26%2010%20mg" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="tablet" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/mig_q10.jpeg" alt="MIG Q10" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Tablet</span>
+                    <h3 class="font-display text-lg font-bold">MIG Q10</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Magnesium, Coenzyme Q10 &amp; Riboflavin formulation supporting neurological nutrition and migraine-management needs.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20MIG%20Q10" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="tablet" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/shitacald3.jpeg" alt="SHITACAL D3" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Tablet</span>
+                    <h3 class="font-display text-lg font-bold">SHITACAL D3</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Calcium + Vitamin D3-based nutritional support for maintaining bone health and calcium balance.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20SHITACAL%20D3" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="tablet" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/triciti_500_tab.jpeg" alt="TRICITI 500 mg" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Tablet</span>
+                    <h3 class="font-display text-lg font-bold">TRICITI 500 mg</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Citicoline 500 mg for neurological support, including use in stroke recovery and cognitive disorders.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20TRICITI%20500%20mg%20(Tab)" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="tablet" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/besivel_md_16.jpeg" alt="BESIVEL MD 8 & 16 mg" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Tablet</span>
+                    <h3 class="font-display text-lg font-bold">BESIVEL MD 8 &amp; 16 mg</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Betahistine mouth-dissolving tablets for management of vertigo and M&eacute;ni&egrave;re&rsquo;s disease symptoms.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20BESIVEL%20MD%208%20%26%2016%20mg" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="tablet" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/besivel_m_12.jpeg" alt="BESIVEL M 12 mg" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Tablet</span>
+                    <h3 class="font-display text-lg font-bold">BESIVEL M 12 mg</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Betahistine 12 mg for management of vertigo, tinnitus and other symptoms associated with M&eacute;ni&egrave;re&rsquo;s disease.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20BESIVEL%20M%2012%20mg" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="tablet" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/migronap_d.jpeg" alt="MIGRONAP D 500 mg" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Tablet</span>
+                    <h3 class="font-display text-lg font-bold">MIGRONAP D 500 mg</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Naproxen Sodium + Domperidone combination for migraine headache and associated nausea.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20MIGRONAP%20D%20500%20mg" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="tablet" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/coxikit_90.jpeg" alt="COXIKIT 90" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Tablet</span>
+                    <h3 class="font-display text-lg font-bold">COXIKIT 90</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Etoricoxib 90 mg for relief of pain and inflammation in various musculoskeletal and arthritic conditions.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20COXIKIT%2090" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="tablet" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/pacvel_mr.jpeg" alt="PACVEL MR" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Tablet</span>
+                    <h3 class="font-display text-lg font-bold">PACVEL MR</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Aceclofenac + Paracetamol + Chlorzoxazone combination for relief of pain, inflammation, and associated muscle spasm.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20PACVEL%20MR" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="tablet" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/pmt_40_tab.jpeg" alt="PMT 40 (Tab)" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Tablet</span>
+                    <h3 class="font-display text-lg font-bold">PMT 40 (Tab)</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Pantoprazole 40 mg for reduction of gastric acid and management of acid-related disorders.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20PMT%2040%20(Tab)" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="tablet" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/pansia_dsr.jpeg" alt="PANSIA DSR" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Tablet</span>
+                    <h3 class="font-display text-lg font-bold">PANSIA DSR</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Acid-control and prokinetic combination for management of acidity, reflux and related gastrointestinal symptoms.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20PANSIA%20DSR" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Injections -->
+            <article class="pcard" data-cat="injection" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/trocoba_inj.jpeg" alt="TRICOBA PFS" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Injection</span>
+                    <h3 class="font-display text-lg font-bold">TRICOBA PFS</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Methylcobalamin 1500 mcg injection for vitamin B12 supplementation and neurological support.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20TRICOBA%20PFS" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="injection" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/braintam_50.jpeg" alt="BRAINTAM" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Injection</span>
+                    <h3 class="font-display text-lg font-bold">BRAINTAM</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Brivaracetam injection for the management of seizures and epilepsy, where injectable antiepileptic therapy is indicated.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20BRAINTAM" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="injection" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/tricetam_inj.jpeg" alt="TRICETAM" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Injection</span>
+                    <h3 class="font-display text-lg font-bold">TRICETAM</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Piracetam injection for neurological conditions where injectable therapy is indicated.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20TRICETAM" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="injection" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/triciti_500_inj.jpeg" alt="TRICITI (Inj)" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Injection</span>
+                    <h3 class="font-display text-lg font-bold">TRICITI (Inj)</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Citicoline injection for neurological support in conditions such as stroke and head injury.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20TRICITI%20(Inj)" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="injection" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/pmt_40_inj.jpeg" alt="PMT 40 (Inj)" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Injection</span>
+                    <h3 class="font-display text-lg font-bold">PMT 40 (Inj)</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Pantoprazole 40 mg injection for acid suppression when parenteral therapy is indicated.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20PMT%2040%20(Inj)" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="pcard" data-cat="injection" data-aos="fade-up">
+              <div class="gborder h-full rounded-3xl p-[1.5px]">
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
+                  <div class="h-48 overflow-hidden bg-mist"><img src="images/tsetron_inj.jpeg" alt="T-SETRON" class="h-full w-full object-cover" /></div>
+                  <div class="flex flex-1 flex-col p-6">
+                    <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Injection</span>
+                    <h3 class="font-display text-lg font-bold">T-SETRON</h3>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-navy/55">Ondansetron injection for prevention and treatment of nausea and vomiting.</p>
+                    <a href="https://wa.me/918652750036?text=Enquiry%20from%20website%20for%20T-SETRON" target="_blank" rel="noreferrer" class="btn mt-5 inline-flex justify-center rounded-full px-5 py-3 text-sm font-bold text-white">Enquire on WhatsApp</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- BANNER / CTA  -->
+      <section class="bg-white py-10 lg:py-14">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="grad relative overflow-hidden rounded-[2rem] px-8 py-10 text-center text-white shadow-xl shadow-ocean/25 sm:px-14 sm:py-12" data-aos="zoom-in">
+            <div class="dots-lt absolute inset-0 opacity-30"></div>
+            <div class="relative">
+              <h2 class="display text-2xl font-extrabold leading-tight sm:text-3xl">More care with quality.</h2>
+              <p class="mx-auto mt-3 max-w-xl text-sm leading-6 text-white/85">Because every product carries a responsibility, and every patient deserves our best.</p>
+              <a href="#contact" class="mt-6 inline-flex rounded-full bg-white px-7 py-3 text-sm font-bold text-navy shadow-lg transition hover:-translate-y-0.5">Partner with TriCure</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NETWORK -->
+      <section id="network" class="bg-white py-24 lg:py-32">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center" data-aos="fade-up">
+            <p class="text-sm font-bold text-leaf">For chemists &amp; stockists</p>
+            <h2 class="display mt-4 text-4xl font-extrabold leading-tight sm:text-5xl">
+              Our authorized <span class="grad-text">distribution network.</span>
+            </h2>
+            <p class="mt-5 leading-7 text-navy/60">
+              Contact the partner below for your area to place orders. If your district is not listed, reach out to us directly and we&rsquo;ll connect you.
+            </p>
+          </div>
+
+          <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="net-card rounded-2xl p-6 ring-1 ring-leaf/10" data-aos="fade-up">
+              <p class="font-display text-lg font-bold text-navy">Chimanlal Sons Medicare</p>
+              <p class="mt-1 text-sm font-semibold text-ocean">Dahisar East</p>
+              <a href="tel:+918693822082" class="mt-4 block text-sm text-navy/60 hover:text-leaf">+91 86938 22082</a>
+            </div>
+            <div class="net-card rounded-2xl p-6 ring-1 ring-leaf/10" data-aos="fade-up" data-aos-delay="60">
+              <p class="font-display text-lg font-bold text-navy">Foray Pharma Distributors</p>
+              <p class="mt-1 text-sm font-semibold text-ocean">Malad West</p>
+              <a href="tel:+918779089591" class="mt-4 block text-sm text-navy/60 hover:text-leaf">87790 89591 / 89287 85359</a>
+            </div>
+            <div class="net-card rounded-2xl p-6 ring-1 ring-leaf/10" data-aos="fade-up" data-aos-delay="120">
+              <p class="font-display text-lg font-bold text-navy">Ator Healthcare</p>
+              <p class="mt-1 text-sm font-semibold text-ocean">Malad East</p>
+              <a href="tel:02269934405" class="mt-4 block text-sm text-navy/60 hover:text-leaf">022 6993 4405</a>
+            </div>
+            <div class="net-card rounded-2xl p-6 ring-1 ring-leaf/10" data-aos="fade-up" data-aos-delay="180">
+              <p class="font-display text-lg font-bold text-navy">Padam Distributors</p>
+              <p class="mt-1 text-sm font-semibold text-ocean">Bhayandar East</p>
+              <a href="tel:+919833416968" class="mt-4 block text-sm text-navy/60 hover:text-leaf">+91 98334 16968</a>
+            </div>
+            <div class="net-card rounded-2xl p-6 ring-1 ring-leaf/10" data-aos="fade-up">
+              <p class="font-display text-lg font-bold text-navy">Chaitali Distributors</p>
+              <p class="mt-1 text-sm font-semibold text-ocean">Bhayandar East</p>
+              <a href="tel:+917045355498" class="mt-4 block text-sm text-navy/60 hover:text-leaf">+91 70453 55498</a>
+            </div>
+            <div class="net-card rounded-2xl p-6 ring-1 ring-leaf/10" data-aos="fade-up" data-aos-delay="60">
+              <p class="font-display text-lg font-bold text-navy">Seven Hills Distributors</p>
+              <p class="mt-1 text-sm font-semibold text-ocean">Goregaon East</p>
+              <a href="tel:02268170000" class="mt-4 block text-sm text-navy/60 hover:text-leaf">022 6817 0000</a>
+            </div>
+            <div class="net-card rounded-2xl p-6 ring-1 ring-leaf/10" data-aos="fade-up" data-aos-delay="120">
+              <p class="font-display text-lg font-bold text-navy">Shubhada Pharma</p>
+              <p class="mt-1 text-sm font-semibold text-ocean">Mahim West</p>
+              <a href="tel:+919833406308" class="mt-4 block text-sm text-navy/60 hover:text-leaf">98334 06308</a>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM  -->
+      <section id="team" class="dark-sec py-24 text-white lg:py-32">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mx-auto mb-14 max-w-2xl text-center" data-aos="fade-up">
+            <p class="text-sm font-bold text-lime">Our team</p>
+            <h2 class="display mt-4 text-4xl font-extrabold leading-tight sm:text-5xl">The people behind <span class="grad-text-lt">TriCure.</span></h2>
+          </div>
+          <div class="mx-auto grid max-w-3xl gap-10 sm:grid-cols-2">
+            <div class="glass group flex flex-col items-center rounded-[2rem] p-8 text-center" data-aos="fade-up">
+              <div class="ring-g w-44 rounded-full p-[4px] shadow-xl shadow-black/20 sm:w-52">
+                <img src="images/rahul_jha.jpeg" alt="Mr. Rahul Pankaj Jha" class="aspect-square w-full rounded-full object-cover object-top transition duration-500 group-hover:scale-[1.04]" onerror="this.parentElement.outerHTML='&lt;div class=&quot;core flex aspect-square w-44 items-center justify-center rounded-full font-display text-5xl font-bold text-white shadow-xl shadow-black/20 sm:w-52&quot;&gt;R&lt;/div&gt;'" />
+              </div>
+              <h3 class="display mt-6 text-xl font-bold">Mr. Rahul Pankaj Jha</h3>
+              <span class="mt-3 inline-block rounded-full bg-lime/15 px-4 py-1.5 text-xs font-bold text-lime">Director</span>
+            </div>
+            <div class="glass group flex flex-col items-center rounded-[2rem] p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+              <div class="ring-g w-44 rounded-full p-[4px] shadow-xl shadow-black/20 sm:w-52">
+                <img src="images/dolly_rahul_jha.jpeg" alt="Director" class="aspect-square w-full rounded-full object-cover transition duration-500 group-hover:scale-[1.04]" onerror="this.parentElement.outerHTML='&lt;div class=&quot;core flex aspect-square w-44 items-center justify-center rounded-full font-display text-5xl font-bold text-white shadow-xl shadow-black/20 sm:w-52&quot;&gt;D&lt;/div&gt;'" />
+              </div>
+              <h3 class="display mt-6 text-xl font-bold">Dolly Rahul Jha</h3>
+              <span class="mt-3 inline-block rounded-full bg-lime/15 px-4 py-1.5 text-xs font-bold text-lime">Director</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="bg-white py-24 lg:py-32">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mb-12" data-aos="fade-up">
+            <p class="text-sm font-bold text-leaf">In their words</p>
+            <h2 class="display mt-4 text-4xl font-extrabold sm:text-5xl">Trust is earned <span class="grad-text">over time.</span></h2>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <blockquote class="flex flex-col rounded-3xl bg-gradient-to-br from-mist to-white p-7 ring-1 ring-leaf/15 transition hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up">
+              <span class="grad-text font-display text-6xl leading-none">&ldquo;</span>
+              <p class="mt-2 flex-1 text-sm leading-7 text-navy/70">TriCure Healthcare has demonstrated a strong commitment to quality, consistency, and professional service. Their approach towards healthcare is truly commendable.</p>
+              <footer class="mt-6 flex items-center gap-3 border-t border-navy/10 pt-5">
+                <span class="grad flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold text-white">A</span>
+                <span class="text-sm font-bold">Dr Ashish Pandey<span class="block font-normal text-navy/50">MD Physician</span></span>
+              </footer>
+            </blockquote>
+            <blockquote class="flex flex-col rounded-3xl bg-gradient-to-br from-mist to-white p-7 ring-1 ring-leaf/15 transition hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up" data-aos-delay="70">
+              <span class="grad-text font-display text-6xl leading-none">&ldquo;</span>
+              <p class="mt-2 flex-1 text-sm leading-7 text-navy/70">Our experience with TriCure Healthcare has been positive. Their products, communication, and timely support reflect their commitment to the healthcare community.</p>
+              <footer class="mt-6 flex items-center gap-3 border-t border-navy/10 pt-5">
+                <span class="grad flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold text-white">S</span>
+                <span class="text-sm font-bold">Dr Shashank Mishra<span class="block font-normal text-navy/50">Physician</span></span>
+              </footer>
+            </blockquote>
+            <blockquote class="flex flex-col rounded-3xl bg-gradient-to-br from-mist to-white p-7 ring-1 ring-leaf/15 transition hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up" data-aos-delay="140">
+              <span class="grad-text font-display text-6xl leading-none">&ldquo;</span>
+              <p class="mt-2 flex-1 text-sm leading-7 text-navy/70">TriCure Healthcare is building its reputation through quality products, ethical professional relationships, and a genuine focus on patient care.</p>
+              <footer class="mt-6 flex items-center gap-3 border-t border-navy/10 pt-5">
+                <span class="grad flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold text-white">V</span>
+                <span class="text-sm font-bold">Vipul Shah<span class="block font-normal text-navy/50">Chimanlal Sons Medicare</span></span>
+              </footer>
+            </blockquote>
+            <blockquote class="flex flex-col rounded-3xl bg-gradient-to-br from-mist to-white p-7 ring-1 ring-leaf/15 transition hover:-translate-y-1 hover:shadow-xl" data-aos="fade-up" data-aos-delay="210">
+              <span class="grad-text font-display text-6xl leading-none">&ldquo;</span>
+              <p class="mt-2 flex-1 text-sm leading-7 text-navy/70">A young and promising pharmaceutical company with a clear focus on quality and continuous improvement. Wishing TriCure continued growth.</p>
+              <footer class="mt-6 flex items-center gap-3 border-t border-navy/10 pt-5">
+                <span class="grad flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold text-white">D</span>
+                <span class="text-sm font-bold">Dinesh Jamnadas<span class="block font-normal text-navy/50">Healthcare partner</span></span>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="dark-sec py-24 text-white lg:py-32">
+        <div class="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[.9fr_1.1fr] lg:px-8">
+          <div data-aos="fade-right">
+            <p class="text-sm font-bold text-lime">Get in touch</p>
+            <h2 class="display mt-4 text-5xl font-extrabold leading-tight sm:text-6xl">Let&rsquo;s make <span class="grad-text-lt">care matter.</span></h2>
+            <p class="mt-7 max-w-md leading-7 text-white/65">Contact us for product information, partnerships, distribution or general enquiries.</p>
+            <div class="mt-10 space-y-4 text-sm">
+              <div class="glass flex gap-4 rounded-2xl p-5">
+                <span class="ico flex h-11 w-11 shrink-0 items-center justify-center rounded-xl">&#8982;</span>
+                <div>
+                  <p class="font-display font-bold">Address</p>
+                  <p class="mt-1 leading-6 text-white/70">Shop No 6, Sai Vandana, Bhayandar, Kharegaon, Bhayandar East, Mira Bhayandar, Maharashtra 401105</p>
+                </div>
+              </div>
+              <a href="tel:+918652750036" class="glass flex gap-4 rounded-2xl p-5">
+                <span class="ico flex h-11 w-11 shrink-0 items-center justify-center rounded-xl">&#9742;</span>
+                <div><p class="font-display font-bold">Phone</p><p class="mt-1 text-white/70">+91 86527 50036</p></div>
+              </a>
+              <a href="mailto:tricurehealthcare@gmail.com" class="glass flex gap-4 rounded-2xl p-5">
+                <span class="ico flex h-11 w-11 shrink-0 items-center justify-center rounded-xl">&#9993;</span>
+                <div><p class="font-display font-bold">Email</p><p class="mt-1 text-white/70">tricurehealthcare@gmail.com</p></div>
+              </a>
+            </div>
+          </div>
+          <form
+            id="enquiry-form"
+            class="rounded-3xl bg-white p-6 text-navy shadow-2xl sm:p-9"
+            data-aos="fade-left"
+          >
+            <p class="font-display text-2xl font-bold">Send an enquiry</p>
+            <div class="mt-7 grid gap-5 sm:grid-cols-2">
+              <label class="text-sm font-semibold text-navy/60">Full name
+                <input required class="mt-2 w-full rounded-xl border border-navy/10 bg-mist/60 px-4 py-3 text-sm text-navy outline-none focus:border-leaf focus:ring-2 focus:ring-leaf/20" type="text" placeholder="Your name" />
+              </label>
+              <label class="text-sm font-semibold text-navy/60">Email
+                <input required class="mt-2 w-full rounded-xl border border-navy/10 bg-mist/60 px-4 py-3 text-sm text-navy outline-none focus:border-leaf focus:ring-2 focus:ring-leaf/20" type="email" placeholder="you@email.com" />
+              </label>
+              <label class="text-sm font-semibold text-navy/60">Phone
+                <input class="mt-2 w-full rounded-xl border border-navy/10 bg-mist/60 px-4 py-3 text-sm text-navy outline-none focus:border-leaf focus:ring-2 focus:ring-leaf/20" type="tel" placeholder="+91" />
+              </label>
+              <label class="text-sm font-semibold text-navy/60">Subject
+                <select class="mt-2 w-full rounded-xl border border-navy/10 bg-mist/60 px-4 py-3 text-sm text-navy outline-none focus:border-leaf focus:ring-2 focus:ring-leaf/20">
+                  <option>Product enquiry</option>
+                  <option>Distribution partnership</option>
+                  <option>General enquiry</option>
+                </select>
+              </label>
+              <label class="text-sm font-semibold text-navy/60 sm:col-span-2">Message
+                <textarea required class="mt-2 h-28 w-full resize-none rounded-xl border border-navy/10 bg-mist/60 px-4 py-3 text-sm text-navy outline-none focus:border-leaf focus:ring-2 focus:ring-leaf/20" placeholder="How can we help?"></textarea>
+              </label>
+            </div>
+            <button class="btn mt-7 rounded-full px-8 py-4 text-sm font-bold text-white" type="submit">Send message</button>
+            <p id="form-note" class="mt-4 text-sm font-semibold text-leaf"></p>
+          </form>
+        </div>
+        <div class="mx-auto mt-14 max-w-7xl px-5 lg:px-8" data-aos="fade-up">
+          <div class="mb-5 flex flex-wrap items-end justify-between gap-3">
+            <p class="font-display text-2xl font-bold">Find us on the map</p>
+            <a href="https://maps.app.goo.gl/gQsBwxopBLtfTfX9A" target="_blank" rel="noreferrer" class="text-sm font-bold text-lime hover:underline">Open in Google Maps &#8599;</a>
+          </div>
+          <div class="ring-g rounded-[2rem] p-[3px] shadow-2xl shadow-black/30">
+            <iframe
+              title="TriCure Healthcare location"
+              class="h-[380px] w-full rounded-[1.9rem] bg-white"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.486675837729!2d72.8556096!3d19.3046768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b13047d81035%3A0xfa0b7e3fe372e7f5!2sTriCure%20Healthcare%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1790406336771!5m2!1sen!2sin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER (5 columns) -->
+    <footer class="bg-navy py-12 text-white">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid gap-10 border-b border-white/10 pb-10 md:grid-cols-5 md:gap-8">
+          <div class="md:col-span-1">
+            <div class="inline-block rounded-2xl border-2 border-lime/60 bg-white px-4 py-3">
+              <img src="images/tricure_healthcare_logo.jpg" alt="TriCure Healthcare" class="h-12 w-auto" />
+            </div>
+            <p class="mt-5 max-w-sm text-sm leading-7 text-white/55">Quality-driven pharmaceutical solutions with more care at every step.</p>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-lime">Quick links</p>
+            <div class="mt-5 grid gap-3 text-sm text-white/65">
+              <a href="#home" class="hover:text-white">Home</a>
+              <a href="#about" class="hover:text-white">About</a>
+              <a href="#why-us" class="hover:text-white">Our Expertise</a>
+              <a href="#products" class="hover:text-white">Products</a>
+              <a href="#network" class="hover:text-white">Network</a>
+              <a href="#team" class="hover:text-white">Team</a>
+              <a href="#contact" class="hover:text-white">Contact</a>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-lime">Products</p>
+            <div class="mt-5 grid gap-3 text-sm text-white/65">
+              <a href="#products" class="hover:text-white">AMINUE 5 &amp; 10 mg</a>
+              <a href="#products" class="hover:text-white">MIG Q10</a>
+              <a href="#products" class="hover:text-white">SHITACAL D3</a>
+              <a href="#products" class="hover:text-white">TRICITI 500 mg</a>
+              <a href="#products" class="hover:text-white">BESIVEL MD 8 &amp; 16 mg</a>
+              <a href="#products" class="hover:text-white">BESIVEL M 12 mg</a>
+              <a href="#products" class="hover:text-white">MIGRONAP D 500 mg</a>
+              <a href="#products" class="hover:text-white">COXIKIT 90</a>
+              <a href="#products" class="hover:text-white">PACVEL MR</a>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-lime">Products</p>
+            <div class="mt-5 grid gap-3 text-sm text-white/65">
+              <a href="#products" class="hover:text-white">PMT 40 (Tab)</a>
+              <a href="#products" class="hover:text-white">PANSIA DSR</a>
+              <a href="#products" class="hover:text-white">TRICOBA PFS</a>
+              <a href="#products" class="hover:text-white">BRAINTAM</a>
+              <a href="#products" class="hover:text-white">TRICETAM</a>
+              <a href="#products" class="hover:text-white">TRICITI (Inj)</a>
+              <a href="#products" class="hover:text-white">PMT 40 (Inj)</a>
+              <a href="#products" class="hover:text-white">T-SETRON</a>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-lime">Contact</p>
+            <div class="mt-5 space-y-4 text-sm text-white/65">
+              <div class="flex gap-3">
+                <span class="ico flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-sm">&#8982;</span>
+                <p class="leading-6">Shop No 6, Sai Vandana, Bhayandar, Kharegaon, Bhayandar East, Mira Bhayandar, Maharashtra 401105</p>
+              </div>
+              <a href="tel:+918652750036" class="flex items-center gap-3 hover:text-white">
+                <span class="ico flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-sm">&#9742;</span>+91 86527 50036
+              </a>
+              <a href="mailto:tricurehealthcare@gmail.com" class="flex items-center gap-3 hover:text-white">
+                <span class="ico flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-sm">&#9993;</span>tricurehealthcare@gmail.com
+              </a>
+             
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between gap-3 pt-6 text-xs text-white/40 sm:flex-row">
+          <p>&copy; <span id="year">2026</span> TriCure Healthcare Pvt. Ltd. All rights reserved.</p>
+          <p>More Care with Quality.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp floating button (proper WhatsApp icon) -->
+    <a
+      href="https://wa.me/918652750036"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Chat on WhatsApp"
+      class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-black/30 transition hover:-translate-y-1"
+    >
+      <svg viewBox="0 0 32 32" class="h-7 w-7" fill="currentColor" aria-hidden="true">
+        <path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.697 4.61 1.902 6.487L4 29l7.75-1.84A11.93 11.93 0 0 0 16.001 27C22.63 27 28 21.627 28 15S22.63 3 16.001 3Zm0 21.818a9.77 9.77 0 0 1-4.98-1.363l-.357-.213-4.6 1.092 1.117-4.482-.234-.367A9.77 9.77 0 0 1 6.18 15c0-5.416 4.406-9.818 9.82-9.818 5.416 0 9.818 4.402 9.818 9.818 0 5.416-4.402 9.818-9.817 9.818Zm5.386-7.35c-.294-.148-1.74-.858-2.01-.956-.27-.098-.467-.148-.664.148-.196.294-.762.956-.934 1.153-.172.196-.344.221-.638.074-.294-.148-1.242-.458-2.366-1.462-.874-.78-1.464-1.743-1.636-2.037-.172-.294-.018-.453.13-.6.133-.133.294-.344.442-.516.147-.172.196-.294.294-.49.098-.196.049-.368-.025-.516-.074-.148-.663-1.6-.909-2.19-.24-.577-.484-.5-.664-.51l-.565-.01c-.196 0-.516.074-.786.368-.27.294-1.03 1.006-1.03 2.455 0 1.448 1.055 2.847 1.202 3.043.147.196 2.078 3.174 5.036 4.45.703.303 1.252.484 1.68.62.706.225 1.348.193 1.855.117.566-.084 1.74-.712 1.985-1.4.245-.688.245-1.278.172-1.4-.073-.123-.27-.196-.564-.344Z"/>
+      </svg>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // Mobile nav toggle
+      const t = document.getElementById("menu-toggle"),
+        n = document.getElementById("main-nav");
+      const closeNav = () => { n.classList.remove("nav-open"); t.setAttribute("aria-expanded", "false"); };
+      t.addEventListener("click", () => { t.setAttribute("aria-expanded", n.classList.toggle("nav-open")); });
+      document.querySelectorAll(".nav-link").forEach((l) => l.addEventListener("click", closeNav));
+      window.addEventListener("scroll", closeNav, { passive: true });
+
+      // Footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Product filter (toggles visibility only, no re-rendering)
+      document.querySelectorAll(".filter-btn").forEach((b) =>
+        b.addEventListener("click", () => {
+          document.querySelectorAll(".filter-btn").forEach((x) => {
+            x.className = "filter-btn rounded-full bg-white px-5 py-2.5 text-sm font-bold text-navy/65 ring-1 ring-navy/10 hover:ring-leaf";
+          });
+          b.className = "filter-btn grad rounded-full px-5 py-2.5 text-sm font-bold text-white";
+          const f = b.dataset.filter;
+          document.querySelectorAll("#product-grid .pcard").forEach((card) => {
+            card.style.display = f === "all" || card.dataset.cat === f ? "" : "none";
+          });
+        })
+      );
+
+      // Contact form: simple local confirmation only, no WhatsApp redirect, resets after submit
+      document.getElementById("enquiry-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const note = document.getElementById("form-note");
+        note.textContent = "Thank you. Our team will get back to you shortly.";
+        this.reset();
+        clearTimeout(window.__formNoteTimer);
+        window.__formNoteTimer = setTimeout(() => { note.textContent = ""; }, 4000);
+      });
+
+      AOS.init({ duration: 700, once: true, offset: 60 });
+    </script>
+  </body>
+</html>
