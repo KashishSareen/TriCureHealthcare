@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Meet Our Founder - Mr. Rahul Pankaj Jha | TriCure Healthcare" />
+    <title>Meet Our Founder | TriCure Healthcare</title>
+  </head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: "#0a2f45",
+            ocean: "#17608a",
+            leaf: "#1e7a45",
+            lime: "#7cc242",
+            mist: "#eef7f2",
+          },
+          fontFamily: {
+            sans: ["DM Sans", "sans-serif"],
+            display: ["Sora", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    html,body { overflow-x: hidden; }
+    body { color: #0a2f45; background: #fbfdfc; overflow-x: hidden; }
+    .display { font-family: "Sora", sans-serif; letter-spacing: -0.04em; }
+    .grad { background: linear-gradient(135deg, #17608a 0%, #1e7a45 60%, #7cc242 100%); }
+    .grad-text { background: linear-gradient(90deg, #17608a, #1e7a45 55%, #5fae30); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .grad-text-lt { background: linear-gradient(90deg, #8fd3f0, #7cc242); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .dark-sec { background: radial-gradient(circle at 15% 0%, rgba(23,96,138,.55), transparent 40%), radial-gradient(circle at 90% 100%, rgba(30,122,69,.5), transparent 40%), #0a2f45; }
+    .btn { background: linear-gradient(135deg, #17608a, #1e7a45); transition: .3s; box-shadow: 0 10px 25px -8px rgba(23,96,138,.55); }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -8px rgba(30,122,69,.6); }
+    .glass { background: linear-gradient(145deg, rgba(255,255,255,.1), rgba(255,255,255,.03)); border: 1px solid rgba(255,255,255,.14); backdrop-filter: blur(10px); transition: .35s; }
+    .ico { background: linear-gradient(135deg, #17608a, #1e7a45); }
+    .nav-open { max-height: 600px !important; opacity: 1 !important; padding: 1.25rem !important; }
+    @media (min-width: 768px) { .nav-open { max-height: none !important; padding: 0 !important; } }
+    .hero-dark { background: radial-gradient(circle at 80% 20%, rgba(23,96,138,.7), transparent 45%), radial-gradient(circle at 10% 90%, rgba(30,122,69,.55), transparent 45%), linear-gradient(160deg, #061f30, #0a2f45 60%, #0d3d3a); }
+    .dots-lt { background-image: radial-gradient(rgba(255,255,255,.14) 1px, transparent 1px); background-size: 26px 26px; }
+    .ring-g { background: linear-gradient(135deg, #17608a, #7cc242); }
+    .mv-card { background: radial-gradient(circle at 15% 0%, rgba(23,96,138,.55), transparent 40%), radial-gradient(circle at 90% 100%, rgba(30,122,69,.5), transparent 40%), #0a2f45; }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  </style>
+
+  <body class="font-sans">
+    <!-- HEADER -->
+    <header class="fixed top-0 z-50 w-full border-b border-white/60 bg-white/85 shadow-sm backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5 lg:px-8">
+        <a href="index.html#home" aria-label="TriCure Healthcare home" class="inline-flex items-center rounded-2xl border-2 border-lime/60 bg-white px-3 py-1.5 shadow-sm">
+          <img src="images/tricure_healthcare_logo.jpg" alt="TriCure Healthcare" class="h-14 w-auto" />
+        </a>
+        <button id="menu-toggle" class="rounded-full border border-navy/15 p-2.5 md:hidden" aria-label="Open navigation" aria-expanded="false">
+          <span class="block h-0.5 w-5 bg-navy"></span>
+          <span class="mt-1 block h-0.5 w-5 bg-navy"></span>
+          <span class="mt-1 block h-0.5 w-5 bg-navy"></span>
+        </button>
+        <nav id="main-nav" class="absolute left-0 top-full max-h-0 w-full overflow-hidden bg-white px-5 opacity-0 transition-all duration-300 md:static md:flex md:max-h-none md:w-auto md:items-center md:gap-6 md:bg-transparent md:px-0 md:opacity-100" aria-label="Primary">
+          <a class="nav-link block py-2 text-sm font-semibold text-navy/70 hover:text-leaf md:py-0" href="index.html#home">Home</a>
+          <a class="nav-link block py-2 text-sm font-semibold text-navy/70 hover:text-leaf md:py-0" href="index.html#about">About</a>
+          <a class="nav-link block py-2 text-sm font-semibold text-navy/70 hover:text-leaf md:py-0" href="journey.html">Our Journey</a>
+          <a class="nav-link block py-2 text-sm font-semibold text-navy/70 hover:text-leaf md:py-0" href="index.html#why-us">Our Expertise</a>
+          <a class="nav-link block py-2 text-sm font-semibold text-navy/70 hover:text-leaf md:py-0" href="index.html#products">Products</a>
+          <a class="nav-link block py-2 text-sm font-semibold text-navy/70 hover:text-leaf md:py-0" href="index.html#network">Network</a>
+          <a class="btn mt-2 inline-flex rounded-full px-6 py-3 text-sm font-bold text-white md:mt-0" href="tel:+917769006006">Contact us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero-dark relative overflow-hidden pt-36 pb-20 text-white lg:pt-44 lg:pb-28">
+        <div class="dots-lt absolute inset-0 opacity-50"></div>
+        <div class="relative mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="flex flex-col items-center gap-12 lg:flex-row lg:gap-16" data-aos="fade-up">
+            <!-- Photo -->
+            <div class="shrink-0">
+              <div class="ring-g mx-auto w-52 rounded-full p-[4px] shadow-2xl shadow-black/40 sm:w-64 lg:w-72">
+                <img
+                  src="images/rahul_jha.jpeg"
+                  alt="Mr. Rahul Pankaj Jha — Founder & Director, TriCure Healthcare"
+                  class="aspect-square w-full rounded-full object-cover object-top"
+                />
+              </div>
+            </div>
+            <!-- Intro text -->
+            <div class="text-center lg:text-left">
+              <p class="text-sm font-bold text-lime">Meet Our Founder</p>
+              <h1 class="display mt-3 text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
+                Mr. Rahul <span class="grad-text-lt">Pankaj Jha</span>
+              </h1>
+              <p class="mt-3 text-lg font-semibold text-white/70">Founder &amp; Director, TriCure Healthcare</p>
+              <p class="mt-5 max-w-xl text-base leading-8 text-white/65">
+                A pharmaceutical professional since 2017, turned entrepreneur in 2024 — driven by one belief: <strong class="text-white">quality healthcare should be accessible and affordable to every patient.</strong>
+              </p>
+              <div class="mt-7 flex flex-wrap justify-center gap-3 lg:justify-start">
+                <a href="tel:+917769006006" class="btn inline-flex rounded-full px-7 py-3 text-sm font-bold text-white">Call +91 77690 06006</a>
+                <a href="index.html#contact" class="glass inline-flex rounded-full px-7 py-3 text-sm font-bold text-white">Get in touch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOUNDER'S JOURNEY STORY -->
+      <section class="bg-white py-20 lg:py-28">
+        <div class="mx-auto max-w-4xl px-5 lg:px-8">
+          <div class="text-center" data-aos="fade-up">
+            <p class="text-sm font-bold text-leaf">Founder&rsquo;s Journey</p>
+            <h2 class="display mt-4 text-4xl font-extrabold leading-tight sm:text-5xl">
+              From Responsibility <span class="grad-text">to Purpose.</span>
+            </h2>
+          </div>
+
+          <div class="mt-14 space-y-8 text-lg leading-8 text-navy/70" data-aos="fade-up">
+            <p>
+              My journey in the pharmaceutical industry began in <strong class="text-navy">2017</strong> &mdash; not as a planned career choice, but as a responsibility that eventually became a purpose.
+            </p>
+            <p>
+              I started my professional journey with a multispecialty pharmaceutical company, where I had the opportunity to understand the fundamentals of the industry, build relationships with healthcare professionals, and learn the importance of <strong class="text-navy">consistency, commitment, and patient-focused healthcare.</strong>
+            </p>
+            <p>
+              My career later took me into the <strong class="text-navy">CNS (Central Nervous System) segment</strong>, where I spent approximately 5&ndash;6 years gaining valuable experience and a deeper understanding of the therapeutic needs of patients, doctors, and the healthcare market.
+            </p>
+            <p>
+              Early in my career, I was given the opportunity to take on greater responsibility and was promoted to the position of <strong class="text-navy">Area Business Manager within my first year.</strong> That experience helped shape my leadership approach and strengthened my belief that success in healthcare is not only about business growth, but also about creating value for the people we ultimately serve.
+            </p>
+          </div>
+
+          <!-- 2024 highlight -->
+          <div class="my-14 rounded-[2rem] bg-gradient-to-br from-navy to-ocean p-8 text-white shadow-2xl shadow-navy/30 sm:p-10" data-aos="fade-up">
+            <p class="text-sm font-bold text-lime">The turning point</p>
+            <h3 class="display mt-3 text-2xl font-bold sm:text-3xl">Then came 2024.</h3>
+            <p class="mt-4 leading-7 text-white/80">
+              After years of experience in the pharmaceutical industry, I took a step I had never imagined I would take: I decided to start my own pharmaceutical company &mdash; <strong class="text-white">TriCure Healthcare.</strong>
+            </p>
+            <p class="mt-5 leading-7 text-white/80">The decision was driven by a simple thought:</p>
+            <blockquote class="mt-5 border-l-4 border-lime pl-5 text-xl font-semibold italic text-white">
+              &ldquo;A patient should never have to compromise on their healthcare simply because of the cost of their medicines.&rdquo;
+            </blockquote>
+          </div>
+
+          <div class="space-y-8 text-lg leading-8 text-navy/70" data-aos="fade-up">
+            <p>
+              With this belief, Tricure Healthcare began its journey with <strong class="text-navy">one brand and a commitment to take one step at a time.</strong>
+            </p>
+            <p>
+              The objective was never to build a company overnight. It was to build something <strong class="text-navy">responsible, sustainable, and patient-focused</strong> &mdash; gradually expanding our product portfolio, reaching more healthcare professionals, entering new markets, and creating medicines that offer meaningful value at a reasonable cost.
+            </p>
+            <p>
+              Today, as I look back at the journey from 2017 to 2024 and beyond, I see more than just professional experience. I see a journey that transformed <strong class="text-navy">responsibility into experience, experience into purpose, and purpose into TriCure Healthcare.</strong>
+            </p>
+            <p class="font-semibold text-navy">The journey has only begun.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MY BELIEF -->
+      <section class="bg-mist py-20 lg:py-28">
+        <div class="mx-auto max-w-4xl px-5 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center" data-aos="fade-up">
+            <p class="text-sm font-bold text-leaf">What guides every step</p>
+            <h2 class="display mt-4 text-4xl font-extrabold leading-tight sm:text-5xl">
+              My <span class="grad-text">belief.</span>
+            </h2>
+          </div>
+
+          <div class="mt-12 rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-leaf/15 sm:p-10" data-aos="fade-up">
+            <blockquote class="text-center text-xl leading-9 text-navy/80 sm:text-2xl">
+              <span class="display grad-text text-6xl leading-none">&ldquo;</span>
+              <p class="mt-2">Quality healthcare should be accessible to every patient, and <strong class="text-navy">affordability should never become a reason to compromise on necessary treatment.</strong></p>
+            </blockquote>
+            <p class="mt-8 text-center text-sm leading-7 text-navy/60">
+              This belief continues to guide every step we take at TriCure Healthcare.
+            </p>
+          </div>
+
+          <!-- Three pillars -->
+          <div class="mt-10 grid gap-5 sm:grid-cols-3" data-aos="fade-up">
+            <div class="rounded-3xl bg-white p-7 text-center ring-1 ring-leaf/15">
+              <p class="display grad-text text-lg font-bold">One professional journey</p>
+              <p class="mt-2 text-sm text-navy/60">to one larger purpose</p>
+            </div>
+            <div class="rounded-3xl bg-white p-7 text-center ring-1 ring-leaf/15">
+              <p class="display grad-text text-lg font-bold">One brand</p>
+              <p class="mt-2 text-sm text-navy/60">to a growing healthcare portfolio</p>
+            </div>
+            <div class="rounded-3xl bg-white p-7 text-center ring-1 ring-leaf/15">
+              <p class="display grad-text text-lg font-bold">Mumbai to India</p>
+              <p class="mt-2 text-sm text-navy/60">and eventually to the world</p>
+            </div>
+          </div>
+
+          <p class="mt-10 text-center text-base font-bold text-navy" data-aos="fade-up">One step at a time.</p>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="dark-sec py-16 text-white">
+        <div class="mx-auto max-w-3xl px-5 text-center lg:px-8" data-aos="fade-up">
+          <h2 class="display text-3xl font-extrabold sm:text-4xl">More care with <span class="grad-text-lt">quality.</span></h2>
+          <p class="mx-auto mt-4 max-w-xl leading-7 text-white/65">Because every product carries a responsibility, and every patient deserves our best.</p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <a href="index.html#products" class="btn inline-flex rounded-full px-7 py-3 text-sm font-bold text-white">View our products</a>
+            <a href="index.html#contact" class="glass inline-flex rounded-full px-7 py-3 text-sm font-bold text-white">Partner with us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy py-12 text-white">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid gap-10 border-b border-white/10 pb-10 md:grid-cols-5 md:gap-8">
+          <div class="md:col-span-1">
+            <div class="inline-block rounded-2xl border-2 border-lime/60 bg-white px-4 py-3">
+              <img src="images/tricure_healthcare_logo.jpg" alt="TriCure Healthcare" class="h-12 w-auto" />
+            </div>
+            <p class="mt-5 max-w-sm text-sm leading-7 text-white/55">Quality-driven pharmaceutical solutions with more care at every step.</p>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-lime">Quick links</p>
+            <div class="mt-5 grid gap-3 text-sm text-white/65">
+              <a href="index.html#home" class="hover:text-white">Home</a>
+              <a href="index.html#about" class="hover:text-white">About</a>
+              <a href="journey.html" class="hover:text-white">Our Journey</a>
+  
+              <a href="index.html#why-us" class="hover:text-white">Our Expertise</a>
+              <a href="index.html#products" class="hover:text-white">Products</a>
+              <a href="index.html#network" class="hover:text-white">Network</a>
+              <a href="index.html#contact" class="hover:text-white">Contact</a>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-lime">Products</p>
+            <div class="mt-5 grid gap-3 text-sm text-white/65">
+              <a href="index.html#products" class="hover:text-white">AMINUE 5 &amp; 10 mg</a>
+              <a href="index.html#products" class="hover:text-white">MIG Q10</a>
+              <a href="index.html#products" class="hover:text-white">SHITACAL D3</a>
+              <a href="index.html#products" class="hover:text-white">TRICITI 500 mg</a>
+              <a href="index.html#products" class="hover:text-white">BESIVEL MD 8 &amp; 16 mg</a>
+              <a href="index.html#products" class="hover:text-white">BESIVEL M 12 mg</a>
+              <a href="index.html#products" class="hover:text-white">MIGRONAP D 500 mg</a>
+              <a href="index.html#products" class="hover:text-white">COXIKIT 90</a>
+              <a href="index.html#products" class="hover:text-white">PACVEL MR</a>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-lime">Products</p>
+            <div class="mt-5 grid gap-3 text-sm text-white/65">
+              <a href="index.html#products" class="hover:text-white">PMT 40 (Tab)</a>
+              <a href="index.html#products" class="hover:text-white">PANSIA DSR</a>
+              <a href="index.html#products" class="hover:text-white">TRICOBA PFS</a>
+              <a href="index.html#products" class="hover:text-white">BRAINTAM</a>
+              <a href="index.html#products" class="hover:text-white">TRICETAM</a>
+              <a href="index.html#products" class="hover:text-white">TRICITI (Inj)</a>
+              <a href="index.html#products" class="hover:text-white">PMT 40 (Inj)</a>
+              <a href="index.html#products" class="hover:text-white">T-SETRON</a>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-lime">Contact</p>
+            <div class="mt-5 space-y-4 text-sm text-white/65">
+              <div class="flex gap-3">
+                <span class="ico flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-sm">&#8982;</span>
+                <p class="leading-6">Shop No 6, Sai Vandana, Bhayandar, Kharegaon, Bhayandar East, Mira Bhayandar, Maharashtra 401105</p>
+              </div>
+              <a href="tel:+917769006006" class="flex items-center gap-3 hover:text-white">
+                <span class="ico flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-sm">&#9742;</span>+91 77690 06006
+              </a>
+              <a href="mailto:tricurehealthcare@gmail.com" class="flex items-center gap-3 hover:text-white">
+                <span class="ico flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-sm">&#9993;</span>tricurehealthcare@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col justify-between gap-3 pt-6 text-xs text-white/40 sm:flex-row">
+          <p>&copy; <span id="year"></span> TriCure Healthcare Pvt. Ltd. All rights reserved.</p>
+          <p>More Care with Quality.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp floating button -->
+    <a href="https://wa.me/917769006006" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp"
+      class="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl shadow-black/30 transition hover:-translate-y-1">
+      <svg viewBox="0 0 32 32" class="h-7 w-7" fill="currentColor" aria-hidden="true">
+        <path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.697 4.61 1.902 6.487L4 29l7.75-1.84A11.93 11.93 0 0 0 16.001 27C22.63 27 28 21.627 28 15S22.63 3 16.001 3Zm0 21.818a9.77 9.77 0 0 1-4.98-1.363l-.357-.213-4.6 1.092 1.117-4.482-.234-.367A9.77 9.77 0 0 1 6.18 15c0-5.416 4.406-9.818 9.82-9.818 5.416 0 9.818 4.402 9.818 9.818 0 5.416-4.402 9.818-9.817 9.818Zm5.386-7.35c-.294-.148-1.74-.858-2.01-.956-.27-.098-.467-.148-.664.148-.196.294-.762.956-.934 1.153-.172.196-.344.221-.638.074-.294-.148-1.242-.458-2.366-1.462-.874-.78-1.464-1.743-1.636-2.037-.172-.294-.018-.453.13-.6.133-.133.294-.344.442-.516.147-.172.196-.294.294-.49.098-.196.049-.368-.025-.516-.074-.148-.663-1.6-.909-2.19-.24-.577-.484-.5-.664-.51l-.565-.01c-.196 0-.516.074-.786.368-.27.294-1.03 1.006-1.03 2.455 0 1.448 1.055 2.847 1.202 3.043.147.196 2.078 3.174 5.036 4.45.703.303 1.252.484 1.68.62.706.225 1.348.193 1.855.117.566-.084 1.74-.712 1.985-1.4.245-.688.245-1.278.172-1.4-.073-.123-.27-.196-.564-.344Z"/>
+      </svg>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      const t = document.getElementById("menu-toggle"),
+        n = document.getElementById("main-nav");
+      const closeNav = () => { n.classList.remove("nav-open"); t.setAttribute("aria-expanded", "false"); };
+      t.addEventListener("click", () => { t.setAttribute("aria-expanded", n.classList.toggle("nav-open")); });
+      document.querySelectorAll(".nav-link").forEach((l) => l.addEventListener("click", closeNav));
+      window.addEventListener("scroll", closeNav, { passive: true });
+      document.getElementById("year").textContent = new Date().getFullYear();
+      AOS.init({ duration: 700, once: true, offset: 60 });
+    </script>
+  </body>
+</html>
