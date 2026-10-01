@@ -53,10 +53,11 @@
       .btn:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -8px rgba(30,122,69,.6); }
       .gborder { background: linear-gradient(135deg, rgba(23,96,138,.35), rgba(124,194,66,.35)); transition: .4s; }
       .pcard:hover .gborder { background: linear-gradient(135deg, #17608a, #7cc242); transform: translateY(-8px); box-shadow: 0 28px 50px -18px rgba(23,96,138,.45); }
-      .pimg { background: radial-gradient(circle at 50% 40%, #fff, #e6f3ee 70%); }
-      .pcard img { transition: transform .5s ease; object-fit: cover; object-position: center; }
-      .pcard:hover img { transform: scale(1.06); }
-      #product-grid .h-48 { overflow: hidden; background: #eef7f2; }
+      .pimg { background: radial-gradient(circle at 50% 35%, #ffffff 0%, #edf8f1 52%, #e3f0ec 100%); }
+      .pcard img { transition: transform .5s ease; object-fit: contain; object-position: center; background: transparent; filter: drop-shadow(0 12px 16px rgba(16, 75, 80, 0.12)); }
+      .pcard:hover img { transform: scale(1.05); }
+      #product-grid .h-48 { overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 18px; background: linear-gradient(180deg, #f6fbf7 0%, #edf6f2 100%); border-bottom: 1px solid rgba(23, 96, 138, 0.06); }
+      #product-grid .h-48 img { width: 100%; height: 100%; max-height: 210px; }
       .glass { background: linear-gradient(145deg, rgba(255,255,255,.1), rgba(255,255,255,.03)); border: 1px solid rgba(255,255,255,.14); backdrop-filter: blur(10px); transition: .35s; }
       .glass:hover { transform: translateY(-6px); border-color: rgba(124,194,66,.6); background: linear-gradient(145deg, rgba(255,255,255,.16), rgba(124,194,66,.08)); }
       .ico { background: linear-gradient(135deg, #17608a, #1e7a45); }
@@ -405,7 +406,7 @@
             <article class="pcard" data-cat="tablet" data-aos="fade-up">
               <div class="gborder h-full rounded-3xl p-[1.5px]">
                 <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
-                  <div class="h-48 overflow-hidden bg-mist"><img src="https://ik.imagekit.io/m3mvlqd9uc/TriCure/mig_q10.png" alt="MIG Q10" class="h-full w-full object-cover" /></div>
+                  <div class="h-48 overflow-hidden bg-mist"><img src="/images/mig_q_10.png" alt="MIG Q10" class="h-full w-full object-cover" /></div>
                   <div class="flex flex-1 flex-col p-6">
                     <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Tablet</span>
                     <h3 class="font-display text-lg font-bold">MIG Q10</h3>
@@ -505,7 +506,7 @@
             <article class="pcard" data-cat="tablet" data-aos="fade-up">
               <div class="gborder h-full rounded-3xl p-[1.5px]">
                 <div class="relative flex h-full flex-col overflow-hidden rounded-[1.4rem] bg-white">
-                  <div class="h-48 overflow-hidden bg-mist"><img src="https://ik.imagekit.io/m3mvlqd9uc/TriCure/coxikit_90.png" alt="COXIKIT 90" class="h-full w-full object-cover" /></div>
+                  <div class="h-48 overflow-hidden bg-mist"><img src="/images/coxikit_90.png" alt="COXIKIT 90" class="h-full w-full object-cover" /></div>
                   <div class="flex flex-1 flex-col p-6">
                     <span class="mb-3 inline-block w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-bold text-navy/60">Tablet</span>
                     <h3 class="font-display text-lg font-bold">COXIKIT 90</h3>
